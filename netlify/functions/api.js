@@ -2,7 +2,7 @@ import express from "express";
 import serverless from "serverless-http";
 import bodyParser from "body-parser";
 import cors from "cors";
-import { fetchProductDetails } from "../../functions/index.js";
+import { fetchProductDetails } from "index.js";
 
 const app = express();
 const router = express.Router();
