@@ -1,4 +1,5 @@
 import express from "express";
+import serverless from "serverless-http";
 import fetch from "node-fetch";
 import { DynamoDBDocumentClient, GetCommand } from "@aws-sdk/lib-dynamodb";
 import multer from "multer";
@@ -447,6 +448,7 @@ router.post('/fetch-products', async (req, res) => {
 // export { fetchProductDetails };
 export default router;
 export { fetchProductDetails, isProductInDb, fetchProductFromApi, main };
+
 
 
 

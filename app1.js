@@ -1,11 +1,14 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import serverless from "serverless-http";
+const router = express.Router();
 import path from "path";
 // import fs from "fs";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 import apiRoutes from "./server/router/index.js";
+// import router from "./functions/index.js";
 
 
 // Get directory name for ES modules
@@ -40,7 +43,8 @@ app.use("/api", apiRoutes);
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
-
+app.use("/.netlify/functions/index", router);
+module.exports.handler = serverless(app);
 
 // Data storage endpoint
 // app.post("/api/save", (req, res) => {
