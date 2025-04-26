@@ -6,7 +6,7 @@
 // import { DynamoDBDocumentClient, GetCommand, PutCommand } from "@aws-sdk/lib-dynamodb";
 // import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 
-//       export const findProduct = async function(barcode){
+//       export const findProduct = async function(barcode){fo
 //         try {
 //         const params = {
 //           TableName: TOKEN_TABLE,
